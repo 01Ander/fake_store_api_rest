@@ -47,3 +47,19 @@ fetchData(`${API}/products?limit=10&offset=5`)
     });
     section.append(...toRender)
   })
+
+  fetchData(`${API}/categories?limit=5&offset=0`)
+  .then((response) => response.json())
+  .then(products => {
+    console.log(products);
+    const toRender = [];
+    const list = document.querySelector('.list');
+
+    products.forEach(element => {
+      const name = document.createElement('li');
+      name.innerText = element.name;
+
+      toRender.push(name)
+    })
+    list.append(...toRender)
+  })

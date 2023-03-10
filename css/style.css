@@ -1,0 +1,42 @@
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #9CCD62;
+}
+header p {
+  font-size: 24px;
+  font-weight: 700;
+  padding: 12px 0;
+  color: #3C3D42;
+}
+header span {
+  width: 250px;
+  height: 250px;
+  background-image: url("../images/isometric-online-shopping-at-home.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+nav {
+  margin: 16px;
+}
+nav ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+nav ul li {
+  text-align: center;
+  width: 100%;
+  cursor: pointer;
+}
+nav ul li:hover {
+  background-color: #F6F8E2;
+}/*# sourceMappingURL=style.css.map */
