@@ -34,7 +34,6 @@ fetchData(`${API}/products?limit=10&offset=5`)
       const price = document.createElement('p')
 
       img.src = element.images[0];
-      img.width = 250;
       title.innerText = element.title;
       price.innerText = `$${element.price}`;
 
