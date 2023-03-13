@@ -1,0 +1,16 @@
+{
+  "name": "fake_store_api_rest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gh-pages -d ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gh-pages": "^5.0.0",
+    "node-fetch": "^3.3.0"
+  }
+}
