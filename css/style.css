@@ -83,6 +83,10 @@ main p:nth-child(1) {
   margin: 12px 8px;
 }
 
+.inactive {
+  display: none;
+}
+
 @media (min-width: 768px) {
   header {
     width: 100%;

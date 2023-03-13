@@ -1,11 +1,12 @@
 const API = 'https://api.escuelajs.co/api/v1';
 const main = document.querySelector('.main')
 
+
 function fetchData(urlApi) {
-	return fetch(urlApi);
+  return fetch(urlApi);
 };
 
-fetchData(`${API}/products?limit=10&offset=5`)
+fetchData(`${API}/products?limit=12&offset=5`)
   .then((response) => response.json())
   .then(products => {
     const toRender = [];
@@ -16,6 +17,8 @@ fetchData(`${API}/products?limit=10&offset=5`)
       const img = document.createElement('img');
       const title = document.createElement('p');
       const price = document.createElement('p')
+
+      art.classList.add(element.category.name);
 
       img.src = element.images[0];
       title.innerText = element.title;
@@ -41,8 +44,10 @@ fetchData(`${API}/products?limit=10&offset=5`)
     products.forEach(element => {
       const name = document.createElement('li');
       name.innerText = element.name;
+      name.classList.add(`li-${element.name}`)
 
       toRender.push(name)
     })
     list.append(...toRender)
   })
+
