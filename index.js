@@ -5,22 +5,6 @@ function fetchData(urlApi) {
 	return fetch(urlApi);
 };
 
-// fetchData(`${API}/products/25`)
-//   .then((response) => response.json())
-//   .then(product => {
-//     const title = document.createElement('h3');
-//     title.innerText = product.title
-//     main.appendChild(title)
-
-//     const img =document.createElement('img');
-//     img.src = product.images[0]
-//     img.width = 250;
-//     main.appendChild(img)
-
-//   })
-//   .catch((error) => console.log(error))
-//   .finally(() => console.log('Finally promise'))
-
 fetchData(`${API}/products?limit=10&offset=5`)
   .then((response) => response.json())
   .then(products => {
