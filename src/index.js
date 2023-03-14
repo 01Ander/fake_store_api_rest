@@ -13,6 +13,7 @@ function getCategories() {
 
         article.classList.add('relatedProducts-container');
         title.innerText = element.name
+        title.classList.add('relatedProducts-title');
         scroll.classList.add('relatedProducts-scrollContainer')
 
         article.appendChild(title);
@@ -20,19 +21,21 @@ function getCategories() {
 
         toRender.push(article)
 
-        getProducts(scroll);
+        getProducts(scroll, element.id);
+        console.log(element.id);
+
       });
       home.append(...toRender)
     })
 }
 
 
-function getProducts(container) {
+function getProducts(container, id) {
   api
-    .get(`/products?limit=5&offset=5`)
+    .get(`/products?categoryId=${id}&limit=5&offset=5`)
     .then(products => {
       data = products.data
-      console.log(data);
+      // console.log(data);
       const toRender = [];
 
       data.forEach(element => {
