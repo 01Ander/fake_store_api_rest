@@ -87,6 +87,31 @@ main p:nth-child(1) {
   display: none;
 }
 
+.relatedProducts-container {
+  margin: 0 12px;
+  height: 216px;
+}
+
+.relatedProducts-scrollContainer {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+.relatedProducts-scrollContainer .product-container {
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.relatedProducts-scrollContainer .product-img {
+  width: 225px;
+  min-width: 225px;
+  max-width: 225px;
+  height: 187.5px;
+  min-height: 187.5px;
+  max-height: 187.5px;
+}
+
 @media (min-width: 768px) {
   header {
     width: 100%;
