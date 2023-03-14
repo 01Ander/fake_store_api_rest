@@ -1,5 +1,5 @@
 const api = axios.create({
-  baseURL: 'https://api.escuelajs.co/api/v1'
+  baseURL: 'https://fakestoreapi.com/products'
 });
 
 const home = document.querySelector('.home');

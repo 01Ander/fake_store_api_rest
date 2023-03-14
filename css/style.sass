@@ -5,6 +5,7 @@ $variation-color: #3C3D42
 
 body
   font-family: 'Montserrat', sans-serif
+  background: $tertiary-color
 
 header
   width: 100%
@@ -25,19 +26,6 @@ header
     background-position: center
     background-repeat: no-repeat
 
-nav
-  margin: 16px
-  ul
-    display: flex
-    flex-direction: column
-    align-items: center
-    li
-      text-align: center
-      width: 100%
-      cursor: pointer
-      &:hover
-        background-color: $secundary-color
-
 main
   width: calc( 100% - 32px)
   margin: 0 16px
@@ -51,47 +39,56 @@ main
   display: none
 
 .relatedProducts-container
+  margin-top: 24px
   height: 216px
+
 
 .relatedProducts-scrollContainer
   overflow-x: scroll
   overflow-y: hidden
   white-space: nowrap
 
+
 .relatedProducts-title
   display: inline-block
-  margin-top: 24px
   margin-bottom: 12px
+  font-weight: 600
 
 .relatedProducts-scrollContainer .product-container
   display: inline-block
-  margin-right: 8px
+  margin-right: 16px
+  height: 100%
+  cursor: pointer
 
-.relatedProducts-scrollContainer .product-img
-  width: 225px
-  min-width: 225px
-  max-width: 225px
+.relatedProducts-scrollContainer
   height: 187.5px
-  min-height: 187.5px
-  max-height: 187.5px
+
+.product-img
+  height: 100%
+
+footer
+  width: 100%
+  height: 20px
+  background: $variation-color
+  position: absolute
+  left: 0
+  bottom: 0
+  text-align: center
 
 // * querys
 @media ( min-width:768px )
-  // header
-  //   width: 100%
-  //   margin: 0 0 8px 0
-  //   flex-direction: row
-  //   text-align: center
-  //   p
-  //     width: 65%
-  //     font-size: 32px
-  //     text-transform: uppercase
-  //     line-height: 36px
-  //     letter-spacing: 3px
-  //     margin-left: 16px
+  header
+    width: 100%
+    margin: 0 0 8px 0
+    flex-direction: row
+    text-align: center
+    p
+      width: 65%
+      font-size: 32px
+      text-transform: uppercase
+      line-height: 36px
+      letter-spacing: 3px
+      margin-left: 16px
 
-  // .main
-  //   width: calc( 100% - 224px)
-  //   margin: 0 112px 32px
-  //   article img
-  //     height: 65%
+  .relatedProducts-container
+    width: 100%

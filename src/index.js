@@ -1,6 +1,6 @@
 function getCategories() {
   api
-    .get('/categories?limit=5&offset=0')
+    .get('/categories')
     .then(categories => {
       data = categories.data
       console.log(data);
@@ -12,7 +12,7 @@ function getCategories() {
         const scroll = document.createElement('div');
 
         article.classList.add('relatedProducts-container');
-        title.innerText = element.name
+        title.innerText = element
         title.classList.add('relatedProducts-title');
         scroll.classList.add('relatedProducts-scrollContainer')
 
@@ -21,8 +21,8 @@ function getCategories() {
 
         toRender.push(article)
 
-        getProducts(scroll, element.id);
-        console.log(element.id);
+        getProducts(scroll, element);
+        console.log(element);
 
       });
       home.append(...toRender)
@@ -30,12 +30,12 @@ function getCategories() {
 }
 
 
-function getProducts(container, id) {
+function getProducts(container, name) {
   api
-    .get(`/products?categoryId=${id}&limit=5&offset=5`)
+    .get(`/category/${name}`)
     .then(products => {
       data = products.data
-      // console.log(data);
+      console.log(data);
       const toRender = [];
 
       data.forEach(element => {
@@ -43,7 +43,7 @@ function getProducts(container, id) {
         const img  = document.createElement('img');
 
         containerProduct.classList.add('product-container');
-        img.src = element.images[0];
+        img.src = element.image;
         img.classList.add('product-img')
 
         containerProduct.appendChild(img);
